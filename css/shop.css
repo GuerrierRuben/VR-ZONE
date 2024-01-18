@@ -1,0 +1,430 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+
+
+
+
+:root {
+  --text-dark: #030712;
+  --white: #ffffff;
+  --max-width: 1200px;
+  --black: black;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.header__bar {
+  padding: 0.5rem;
+  font-size: 0.8rem;
+  text-align: center;
+  background-color: var(--text-dark);
+  color: var(--white);
+  margin-bottom: -70px;
+}
+
+.header__bar p{
+  display: inline-block;
+  font-size: large;
+  animation: slide 7s linear infinite;
+}
+
+@keyframes slide{
+  0%{
+    transform:translateX(150%);
+  }
+  100%{
+    transform:translatex(-150%);
+  }
+}
+
+
+.nav__container {
+  padding: 2rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav__logo img{
+  width: auto;
+  height: 100px;
+}
+
+.nav__links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.link a {
+  padding: 0 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-light);
+  transition: 0.3s;
+}
+
+.link a:hover {
+  color: var(--text-dark);
+}
+
+.nav__icons {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav__icons span {
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+
+
+
+/*html{
+  overflow-x: hidden;
+}*/
+
+/***************************************************************/
+/*                        Sa se antet la                       */
+/***************************************************************/
+
+#header{
+  background-image: url(assets/mw2-hd-514fef6c.jpg);
+  background-size: cover;
+  height: 300px;
+  position: relative;
+}
+
+body.scrolled #header{
+  background-image: none;
+  height: 70px;
+  background-color: var(--black);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+}
+
+body.scrolled #header h1{
+  display: none;
+}
+
+body.scrolled .section__container {
+  margin: auto;
+  padding: 0.5rem 1rem;
+}
+
+body.scrolled .nav__logo img{
+  width: auto;
+  height: 60px;
+}
+
+#header h1{
+  position: absolute;
+  right: 100px;
+  bottom: 0;
+  color: var(--white);
+  font-size: 60px;
+  font-weight: bolder;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.section__container {
+  margin-top: 200px;
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 5rem 1rem;
+}
+
+.section__title::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  height: 3px;
+  width: 75px;
+  background-color: var(--text-dark);
+}
+
+
+
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  color: gray;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+/***************************************************************/
+/*               Sa se seksyon categori ak pwodwi yo           */
+/***************************************************************/
+
+#shop-section{
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  position: relative;
+}
+
+ul{
+  list-style: none;
+}
+.products{
+  width: 80%;
+  height: auto;
+  margin-left: 15%;
+}
+
+.products::-webkit-scrollbar{
+  width: 0;
+}
+.left{
+  width: 20%;
+  height: auto;
+  overflow: hidden;
+  padding: 20px 6px 5px 20px;
+  position: fixed;
+}
+
+#shop-section .left h1{
+  font-size: 2rem;
+}
+
+#shop-section .left li{
+  margin-top: 15px;
+}
+
+#shop-section .left a.active{
+  background-color: var(--text-dark);
+  color: var(--white);
+  padding: 8px;
+  margin-left: -5px;
+}
+
+#shop-section .right{
+  border-left: 2px solid var(--text-light);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  height:2000px;
+}
+
+#shop-section .right .info{
+  padding: 0 100px 0 30px;
+  height: 70px;
+  justify-content: space-between;
+  text-align: right;
+  top:70px;
+  background-color: transparent;
+}
+
+select {
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: rgb(246, 255, 255);
+}
+
+
+#shop-section .right .products {
+  height: 100%;
+  display: grid;
+  grid-template-rows: repeat(1fr, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+  padding: 40px 80px;
+}
+#shop-section .right .products div:hover {
+  transform: translateY(-10px);
+}
+
+
+#shop-section .right .products div {
+  width: 250px;
+  height: 200px;
+  text-align: justify;
+  transition: all .40s ease-in-out;
+}
+
+#shop-section .right .products div img {
+  width: 100%;
+  height: 100%;
+  padding: 0 40px;
+  margin-bottom: 30px;
+}
+
+#shop-section .right .products div p {
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+
+
+
+/***************************************************************/
+/*                        Sa se pye paj la                       */
+/***************************************************************/
+
+
+.footer__container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  overflow: hidden;
+}
+
+.footer__heading {
+  color: var(--text-light);
+  font-size: 1rem;
+  font-weight: 600;
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
+  position: relative;
+  margin-top: 50px;
+}
+
+.footer__heading::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 50px;
+  background-color: var(--text-light);
+}
+
+.footer__col p {
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  color: var(--text-light);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+
+.footer__col p:hover {
+  color: var(--text-dark);
+}
+
+.footer__col p i {
+  font-size: 1rem;
+  margin-right: 0.5rem;
+}
+
+.about{
+  float: left;
+  text-align: justify;
+}
+
+.footer__bar {
+  padding: 2rem 1rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 2rem;
+  overflow: hidden;
+}
+
+.copyright {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-light);
+}
+
+.footer__form {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.footer__form form {
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  align-items: center;
+}
+
+.footer__form input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid var(--text-dark);
+  font-size: 0.8rem;
+}
+
+.footer__form .btn {
+  background-color: var(--text-dark);
+  color: var(--white);
+}
+.btno {
+  padding: 0.75rem 2rem;
+  font-size: 0.8rem;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+@media (width < 900px) {
+  header {
+    margin-top: 5rem;
+  }
+  .header__image{
+    width: 350px;
+  }
+  .header__image .lips{
+    position: absolute;
+    max-width: 200px;
+    top: -30px;
+    right: 200px;
+  }
+
+  
+
+  .musthave__grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+
+  .news__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+
+
+  .footer__bar {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .copyright {
+    text-align: center;
+  }
+
+  .footer__form {
+    justify-content: center;
+  }
+}
+
+@media (width < 600px) {
+  .footer__container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
